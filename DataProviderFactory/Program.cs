@@ -18,10 +18,10 @@ namespace DataProviderFactory
                 ConfigurationManager.AppSettings["provider"];
             //string connectionString =
             //	ConfigurationManager.AppSettings["connectionString"];
-            //string connectionString =
-            //	ConfigurationManager.ConnectionStrings["AutoLotSqlProvider"].ConnectionString;
             string connectionString =
-                ConfigurationManager.AppSettings["connectionString"];
+                ConfigurationManager.ConnectionStrings["AutoLotSqlProvider"].ConnectionString;
+            //string connectionString =
+            //    ConfigurationManager.AppSettings["connectionString"];
 
             // Get the factory provider.
             DbProviderFactory factory = DbProviderFactories.GetFactory(dataProvider);
